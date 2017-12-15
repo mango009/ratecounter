@@ -49,7 +49,7 @@ func (r *RateCounter) run() {
 	go func() {
         tick := float64(r.interval) / float64(r.resolution)
         if tick <= 0 {
-            fmt.Printf("^^^^^^Panicing... %v,%v,%v,%v,%v\n", r.interval, float64(r.interval), r.resolution, float64(r.resolution), tick)
+            fmt.Printf("^^^^^^Panicing... %d, %f, %d, %f, %f\n", r.interval, float64(r.interval), r.resolution, float64(r.resolution), tick)
         }        
 		ticker := time.NewTicker(time.Duration(float64(r.interval) / float64(r.resolution)))
 
