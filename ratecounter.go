@@ -37,7 +37,7 @@ func (r *RateCounter) WithResolution(resolution int) *RateCounter {
 	r.resolution = resolution
 	r.partials = make([]Counter, resolution)
 	r.current = 0
-
+	fmt.Printf("created rate counter %v\n", *r)
 	return r
 }
 
